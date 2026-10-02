@@ -5,7 +5,7 @@ const PORTFOLIO_DATA = {
     brand: "Jude",
     name: "JUDE",
     fullName: "Jude",
-    role: "Cybersecurity Specialist",
+    role: "Security Analyst / Developer",
     location: "London · New York · Remote",
     status: "Available for select security engagements",
     email: "hello@jude.design",
