@@ -1114,28 +1114,28 @@ button {
    HOMEPAGE REDESIGN — SECURITY OPERATIONS EDITORIAL
    ========================================================================== */
 :root {
-  --bg-hero: #090b10;
-  --bg-page: #0e1118;
-  --bg-card: #141923;
-  --bg-dark: #f5f7fb;
-  --text-dark: #f5f7fb;
-  --text-muted: #9aa5b5;
-  --text-dim: #667085;
-  --border-light: rgba(255, 255, 255, 0.11);
-  --border-dark: #f5f7fb;
-  --accent-black: #f5f7fb;
-  --accent-blue: #72a7ff;
-  --accent-emerald: #72e0b0;
-  --accent-violet: #aa8cff;
-  --shadow-nav: 0 18px 50px rgba(0, 0, 0, 0.28);
-  --shadow-card: 0 20px 60px rgba(0, 0, 0, 0.2);
-  --shadow-hover: 0 24px 70px rgba(0, 0, 0, 0.34);
+  --bg-hero: #ffffff;
+  --bg-page: #ffffff;
+  --bg-card: #ffffff;
+  --bg-dark: #111317;
+  --text-dark: #111317;
+  --text-muted: #4e5768;
+  --text-dim: #8490a2;
+  --border-light: rgba(0, 0, 0, 0.08);
+  --border-dark: #111317;
+  --accent-black: #111317;
+  --accent-blue: #2563eb;
+  --accent-emerald: #059669;
+  --accent-violet: #7c3aed;
+  --shadow-nav: 0 4px 24px rgba(0, 0, 0, 0.06);
+  --shadow-card: 0 10px 30px rgba(0, 0, 0, 0.04);
+  --shadow-hover: 0 18px 40px rgba(0, 0, 0, 0.09);
 }
 
 body { background: var(--bg-page); color: var(--text-dark); }
 .site-header { top: 18px; }
-.nav-bar-clean { background: rgba(14, 17, 24, 0.84); border-color: var(--border-light); backdrop-filter: blur(18px); }
-.brand-badge { background: var(--accent-emerald); color: #07110d; }
+.nav-bar-clean { background: rgba(255, 255, 255, 0.94); border-color: var(--border-light); backdrop-filter: blur(18px); }
+.brand-badge { background: var(--accent-emerald); color: #ffffff; }
 .brand-title, .nav-link-clean.active, .nav-link-clean:hover { color: var(--text-dark); }
 .nav-link-clean { color: var(--text-muted); }
 .nav-separator { color: #3e4858; }
@@ -1144,10 +1144,10 @@ body { background: var(--bg-page); color: var(--text-dark); }
 .btn-hire-me:hover { background: var(--text-dark); color: #0a0d12; }
 .btn-icon-sound { background: #1a202c; border-color: var(--border-light); }
 
-.hero-stage { min-height: min(820px, 100vh); justify-content: center; padding: 150px 7vw 90px; background: radial-gradient(circle at 74% 38%, rgba(72, 109, 175, 0.2), transparent 34%), linear-gradient(135deg, #090b10 0%, #0d1119 60%, #111a1b 100%); }
-.hero-stage::after { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(9,11,16,.9) 0%, transparent 68%); pointer-events: none; }
-.hero-bg-geometry { opacity: .24; mix-blend-mode: screen; }
-.hero-bg-geometry svg circle { stroke: rgba(114, 224, 176, .5); }
+.hero-stage { min-height: min(820px, 100vh); justify-content: center; padding: 150px 7vw 90px; background: #ffffff; }
+.hero-stage::after { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(255,255,255,.96) 0%, rgba(255,255,255,0) 68%); pointer-events: none; }
+.hero-bg-geometry { opacity: .18; mix-blend-mode: multiply; }
+.hero-bg-geometry svg circle { stroke: rgba(5, 150, 105, .38); }
 .hero-left-meta { top: 168px; left: 7vw; gap: 4px; }
 .hero-left-meta .meta-label { color: var(--accent-emerald); font-family: var(--font-mono); font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; }
 .hero-giant-typography { top: 42%; justify-content: flex-start; padding-left: 7vw; font-family: var(--font-heading); font-size: clamp(6.8rem, 19vw, 19rem); font-weight: 800; letter-spacing: -.09em; color: rgba(245,247,251,.055); }
