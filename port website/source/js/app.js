@@ -344,22 +344,36 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     certsGrid.innerHTML = list.map(c => `
-      <article class="cert-card-clean">
-        <div>
-          <div class="cert-header-clean">
-            <div class="cert-icon-box">${c.badgeIcon || '▣'}</div>
-            <div>
-              <div class="cert-issuer">${escapeHtml(c.issuer || '')}</div>
-              <h3 class="cert-title">${escapeHtml(c.title)}</h3>
-            </div>
-          </div>
+      <article class="cert-card-clean" data-id="${c.id}">
+        <button class="cert-toggle" type="button" aria-expanded="false">
+          <span class="cert-header-clean">
+            <span class="cert-icon-box">${c.badgeIcon || '▣'}</span>
+            <span>
+              <span class="cert-issuer">${escapeHtml(c.issuer || '')}</span>
+              <span class="cert-title">${escapeHtml(c.title)}</span>
+            </span>
+          </span>
+          <span class="cert-toggle-hint">Open certificate details <span aria-hidden="true">↓</span></span>
+        </button>
+        <div class="cert-body" hidden>
           <p class="cert-desc">${escapeHtml(c.description || '')}</p>
           ${c.credentialId ? `<p class="cert-id">ID · ${escapeHtml(c.credentialId)}</p>` : ''}
+          ${c.verifyUrl ? `<a class="btn-hire-me cert-verify" href="${c.verifyUrl}" target="_blank" rel="noopener noreferrer">${escapeHtml(c.verifyLabel || 'Verify')} ↗</a>` : ''}
+          ${engageHtml(`cert-${c.id}`)}
         </div>
-        ${c.verifyUrl ? `<a class="btn-hire-me cert-verify" href="${c.verifyUrl}" target="_blank" rel="noopener noreferrer">${escapeHtml(c.verifyLabel || 'Verify')} ↗</a>` : ''}
-        ${engageHtml(`cert-${c.id}`)}
       </article>
     `).join('');
+    certsGrid.querySelectorAll('.cert-toggle').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const card = btn.closest('.cert-card-clean');
+        const body = card.querySelector('.cert-body');
+        const open = body.hidden;
+        body.hidden = !open;
+        btn.setAttribute('aria-expanded', String(open));
+        card.classList.toggle('is-open', open);
+        window.soundEngine?.playClick();
+      });
+    });
     bindEngageForms(certsGrid);
   }
 

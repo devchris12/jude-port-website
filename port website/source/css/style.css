@@ -1736,18 +1736,62 @@ button {
 .cert-card-clean {
   background: #ffffff;
   border-radius: var(--radius-lg);
-  padding: 36px;
   box-shadow: var(--shadow-card);
   border: 1px solid var(--border-light);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  transition: transform 0.3s ease;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.cert-card-clean:hover {
+.cert-card-clean:hover,
+.cert-card-clean.is-open {
   transform: translateY(-4px);
   box-shadow: var(--shadow-hover);
+}
+
+.cert-toggle {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 18px;
+  padding: 32px 36px;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+  font: inherit;
+}
+
+.cert-toggle:hover .cert-toggle-hint,
+.cert-card-clean.is-open .cert-toggle-hint {
+  color: var(--text-dark);
+}
+
+.cert-toggle-hint {
+  display: flex;
+  justify-content: space-between;
+  color: var(--text-muted);
+  font-size: 0.82rem;
+  font-weight: 700;
+  transition: color 0.2s ease;
+}
+
+.cert-toggle-hint span {
+  transition: transform 0.2s ease;
+}
+
+.cert-card-clean.is-open .cert-toggle-hint span {
+  transform: rotate(180deg);
+}
+
+.cert-body {
+  padding: 0 36px 32px;
+  border-top: 1px solid var(--border-light);
+}
+
+.cert-body .engage-wrap {
+  margin-top: 24px;
 }
 
 .cert-header-clean {
