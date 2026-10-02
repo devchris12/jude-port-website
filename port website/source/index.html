@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jude — Cybersecurity Specialist</title>
+  <meta name="description" content="Portfolio of Jude. Cybersecurity specialist focused on defense, cloud security, and secure engineering. Projects, verified certificates, and contact.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=JetBrains+Mono:wght@400;500;700&family=Oswald:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="nav-bar-clean" aria-label="Primary">
+      <div class="nav-brand" data-goto="home">
+        <div class="brand-badge">JD</div>
+        <span class="brand-title">Jude</span>
+      </div>
+
+      <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+
+      <ul class="nav-menu-clean" id="nav-menu">
+        <li><button class="nav-link-clean active" data-view="home">Home</button><span class="nav-separator">/</span></li>
+        <li><button class="nav-link-clean" data-view="about">About</button><span class="nav-separator">/</span></li>
+        <li><button class="nav-link-clean" data-view="projects">Projects</button><span class="nav-separator">/</span></li>
+        <li><button class="nav-link-clean" data-view="certificates">Certificates</button><span class="nav-separator">/</span></li>
+        <li><button class="nav-link-clean" data-view="labs">Labs</button><span class="nav-separator">/</span></li>
+        <li><button class="nav-link-clean" data-view="contact">Contact</button></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button id="sound-toggle-btn" class="btn-icon-sound" title="Toggle sound" type="button">🔇</button>
+        <button class="btn-hire-me" data-goto="contact" type="button">Hire me</button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- HOME -->
+  <main id="view-home" class="view-section active">
+    <section class="hero-stage">
+      <div class="hero-bg-geometry" aria-hidden="true">
+        <svg viewBox="0 0 1440 900" fill="none" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="280" cy="180" r="260" stroke="rgba(0, 0, 0, 0.12)" stroke-width="1.2"/>
+          <circle cx="280" cy="180" r="440" stroke="rgba(0, 0, 0, 0.07)" stroke-width="1"/>
+          <circle cx="1180" cy="620" r="300" stroke="rgba(0, 0, 0, 0.1)" stroke-width="1.2"/>
+          <circle cx="1180" cy="620" r="500" stroke="rgba(0, 0, 0, 0.05)" stroke-width="1"/>
+        </svg>
+      </div>
+
+      <div class="hero-left-meta">
+        <span class="meta-label">Cybersecurity</span>
+        <span class="meta-label">Specialist</span>
+      </div>
+
+      <div class="hero-giant-typography" aria-hidden="true">
+        <span class="giant-name">JUDE</span>
+      </div>
+
+      <div class="hero-portrait-wrap hero-portrait-wrap--quiet">
+        <div class="hero-mark" aria-hidden="true">
+          <span class="hero-mark-ring"></span>
+        </div>
+      </div>
+
+      <p class="hero-lede">Threat defense. Secure systems. Verifiable credentials.</p>
+
+      <div class="hero-cta-row">
+        <button class="btn-submit-clean btn-hero-primary" data-goto="projects" type="button">View work</button>
+        <button class="btn-hire-me" data-goto="about" type="button">About me</button>
+      </div>
+
+      <div class="hero-scroll-down" id="hero-scroll-btn">
+        <span>Scroll</span>
+        <span class="down-arrow">↓</span>
+      </div>
+    </section>
+
+    <section class="home-content-section" id="home-content">
+      <div class="container">
+        <div class="editorial-header">
+          <span class="editorial-tag">About</span>
+          <h2 class="editorial-title">Hardened systems. Clear defenses. Measurable risk reduction.</h2>
+          <p class="section-lede">I secure applications, cloud environments, and infrastructure — from threat modeling to incident-ready operations.</p>
+          <button class="text-link" data-goto="about" type="button">Read the full story →</button>
+        </div>
+
+        <div class="editorial-bento" id="home-stats"></div>
+
+        <div id="home-featured-block" hidden>
+          <div class="editorial-header" style="margin-top: 40px;">
+            <span class="editorial-tag">Selected work</span>
+            <h2 class="editorial-title">Featured highlights</h2>
+          </div>
+          <div id="featured-projects-container" class="featured-grid"></div>
+          <div class="center-cta">
+            <button class="btn-hire-me" data-goto="projects" type="button">View all projects →</button>
+          </div>
+        </div>
+
+        <div class="editorial-header">
+          <span class="editorial-tag">Endorsements</span>
+          <h2 class="editorial-title">What collaborators say</h2>
+        </div>
+        <div id="testimonials-container" class="testimonials-editorial"></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ABOUT -->
+  <section id="view-about" class="view-section about-page">
+    <div class="container">
+      <div class="editorial-header">
+        <span class="editorial-tag">About me</span>
+        <h1 class="editorial-title">Cybersecurity specialist and credentialed practitioner.</h1>
+      </div>
+
+      <div class="about-layout">
+        <div class="about-copy">
+          <div id="about-paragraphs"></div>
+          <dl class="about-meta">
+            <div>
+              <dt>Based</dt>
+              <dd>London · New York · Remote</dd>
+            </div>
+            <div>
+              <dt>Status</dt>
+              <dd><span class="status-dot"></span> Available for Q3/Q4</dd>
+            </div>
+            <div>
+              <dt>Focus</dt>
+              <dd>AppSec, cloud security, defensive engineering</dd>
+            </div>
+          </dl>
+        </div>
+        <aside class="about-panel">
+          <div class="about-portrait-card">
+            <div class="hero-mark hero-mark-sm" aria-hidden="true">
+              <span class="hero-mark-ring"></span>
+              <span class="hero-mark-core">JD</span>
+            </div>
+            <p class="about-panel-name">Jude</p>
+            <p class="about-panel-role">Cybersecurity specialist</p>
+            <div class="social-row" id="about-socials"></div>
+          </div>
+        </aside>
+      </div>
+
+      <div class="skills-grid" id="skills-grid"></div>
+
+      <div class="editorial-header" style="margin-top: 48px;">
+        <span class="editorial-tag">Path</span>
+        <h2 class="editorial-title">A short timeline</h2>
+      </div>
+      <ol class="timeline" id="about-timeline"></ol>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="view-projects" class="view-section projects-page">
+    <div class="container">
+      <div class="editorial-header">
+        <span class="editorial-tag">Portfolio</span>
+        <h1 class="editorial-title">Cybersecurity projects</h1>
+        <p class="section-lede">Write-ups open as question and answer — not embedded PDFs. Files will be added here when they are ready.</p>
+      </div>
+
+      <div class="section-engage" data-engage-host="section-projects"></div>
+
+      <div class="projects-filter-bar" id="projects-filter-bar" hidden>
+        <div class="clean-filter-pills">
+          <button class="clean-pill-btn active" data-filter="all" type="button">All</button>
+          <button class="clean-pill-btn" data-filter="appsec" type="button">AppSec</button>
+          <button class="clean-pill-btn" data-filter="cloud" type="button">Cloud</button>
+          <button class="clean-pill-btn" data-filter="detection" type="button">Detection</button>
+          <button class="clean-pill-btn" data-filter="forensics" type="button">Forensics</button>
+        </div>
+        <input type="search" id="project-search-input" class="clean-search-input" placeholder="Search questions or titles…">
+      </div>
+
+      <div id="projects-grid" class="clean-projects-grid qa-projects-grid"></div>
+    </div>
+  </section>
+
+  <!-- LABS -->
+  <section id="view-labs" class="view-section labs-page">
+    <div class="container">
+      <div class="editorial-header">
+        <span class="editorial-tag">Sandbox</span>
+        <h1 class="editorial-title">Creative UI labs</h1>
+      </div>
+
+      <div class="labs-layout-clean">
+        <div id="labs-cards-container" class="labs-sidebar-clean"></div>
+        <div class="lab-stage-clean">
+          <div class="lab-viewport" data-viewport="particles">
+            <div class="canvas-box-clean">
+              <canvas id="lab-particle-canvas"></canvas>
+            </div>
+            <div class="lab-controls-grid">
+              <div class="lab-control-item">
+                <label class="lab-control-label"><span>Frequency</span><span id="val-frequency">0.015</span></label>
+                <input type="range" id="param-frequency" class="lab-slider" min="0.005" max="0.04" step="0.002" value="0.015">
+              </div>
+              <div class="lab-control-item">
+                <label class="lab-control-label"><span>Speed</span><span id="val-speed">0.03</span></label>
+                <input type="range" id="param-speed" class="lab-slider" min="0.01" max="0.08" step="0.005" value="0.03">
+              </div>
+              <div class="lab-control-item">
+                <label class="lab-control-label"><span>Strands</span><span id="val-waves">6</span></label>
+                <input type="range" id="param-waves" class="lab-slider" min="2" max="12" step="1" value="6">
+              </div>
+            </div>
+          </div>
+
+          <div class="lab-viewport hidden" data-viewport="glass">
+            <div class="glass-playground-layout">
+              <div class="glass-preview-stage">
+                <div id="glass-preview-box" class="glass-preview-box">
+                  <h3 style="margin-bottom: 8px;">Glass component</h3>
+                  <p style="font-size: 0.85rem;">Adjust parameters and copy CSS tokens.</p>
+                </div>
+              </div>
+              <div class="glass-code-panel">
+                <pre id="glass-css-code"></pre>
+                <button id="copy-glass-code" class="btn-copy-code" type="button">Copy CSS</button>
+              </div>
+            </div>
+            <div class="lab-controls-grid" style="margin-top: 20px;">
+              <div class="lab-control-item">
+                <label class="lab-control-label"><span>Blur</span><span id="val-glass-blur">16px</span></label>
+                <input type="range" id="glass-blur" class="lab-slider" min="0" max="40" step="1" value="16">
+              </div>
+              <div class="lab-control-item">
+                <label class="lab-control-label"><span>Opacity</span><span id="val-glass-opacity">25%</span></label>
+                <input type="range" id="glass-opacity" class="lab-slider" min="5" max="80" step="5" value="25">
+              </div>
+            </div>
+          </div>
+
+          <div class="lab-viewport hidden" data-viewport="scrambler">
+            <div class="scrambler-stage">
+              <div id="scramble-output" class="scramble-output-text">SWISS EDITORIAL INTERFACE</div>
+            </div>
+            <div class="scrambler-input-bar">
+              <input type="text" id="scramble-input" value="RADICAL MINIMALISM V2.0">
+              <button id="scramble-trigger" class="btn-hire-me" style="background: #111; color: #fff;" type="button">Decrypt</button>
+            </div>
+          </div>
+
+          <div class="lab-viewport hidden" data-viewport="spring">
+            <div class="canvas-box-clean">
+              <canvas id="lab-spring-canvas"></canvas>
+            </div>
+            <p style="text-align: center; color: var(--text-muted); font-size: 0.9rem;">Click and fling magnetic nodes across the canvas.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CERTIFICATES -->
+  <section id="view-certificates" class="view-section certs-page">
+    <div class="container">
+      <div class="editorial-header">
+        <span class="editorial-tag">Credentials</span>
+        <h1 class="editorial-title">Official certifications</h1>
+        <p class="section-lede">Certificate files will appear here after they are uploaded. No placeholder credentials in the meantime.</p>
+      </div>
+      <div class="section-engage" data-engage-host="section-certificates"></div>
+      <div id="certs-grid" class="certs-grid-clean"></div>
+    </div>
+  </section>
+
+  <!-- CONTACT + FEEDBACK -->
+  <section id="view-contact" class="view-section contact-page">
+    <div class="container">
+      <div class="editorial-header">
+        <span class="editorial-tag">Contact</span>
+        <h1 class="editorial-title">Let’s harden something that matters.</h1>
+      </div>
+
+      <div class="contact-layout">
+        <form id="portfolio-contact-form" class="contact-card" novalidate>
+          <h2 class="card-heading">Security inquiry</h2>
+          <p class="card-sub">For assessments, secure builds, or defensive engineering. I reply within one business day.</p>
+
+          <div class="clean-form-group">
+            <label for="contact-name">Name / company</label>
+            <input id="contact-name" name="name" type="text" class="clean-input" placeholder="Acme Corp / Sarah Connor" required>
+          </div>
+          <div class="clean-form-group">
+            <label for="contact-email">Email</label>
+            <input id="contact-email" name="email" type="email" class="clean-input" placeholder="you@example.com" required>
+          </div>
+          <div class="clean-form-group">
+            <label for="contact-brief">Brief</label>
+            <textarea id="contact-brief" name="brief" class="clean-textarea" rows="4" placeholder="Goals, timeline, and scope…" required></textarea>
+          </div>
+          <button type="submit" class="btn-submit-clean">Send inquiry</button>
+        </form>
+
+        <aside class="contact-aside">
+          <div class="contact-card">
+            <h2 class="card-heading">Direct lines</h2>
+            <a class="footer-email-text block-link" href="mailto:hello@jude.design">hello@jude.design</a>
+            <p class="card-sub" style="margin-top: 12px;">London / New York · available worldwide</p>
+            <div class="social-row" id="contact-socials"></div>
+          </div>
+        </aside>
+      </div>
+
+      <div class="editorial-header" style="margin-top: 72px;">
+        <span class="editorial-tag">Feedback</span>
+        <h2 class="editorial-title">Leave a note</h2>
+        <p class="section-lede">Interactive rating plus a public wall stored in this browser. Great for demos — swap to a backend when you go live.</p>
+      </div>
+
+      <div class="feedback-layout">
+        <form id="feedback-form" class="contact-card" novalidate>
+          <div class="clean-form-group">
+            <label for="fb-name">Your name</label>
+            <input id="fb-name" name="name" type="text" class="clean-input" placeholder="Alex Rivera" required maxlength="80">
+          </div>
+          <div class="clean-form-group">
+            <label>Rating</label>
+            <div class="star-rating" id="star-rating" role="radiogroup" aria-label="Rating from 1 to 5">
+              <button type="button" class="star-btn" data-value="1" aria-label="1 star">★</button>
+              <button type="button" class="star-btn" data-value="2" aria-label="2 stars">★</button>
+              <button type="button" class="star-btn" data-value="3" aria-label="3 stars">★</button>
+              <button type="button" class="star-btn" data-value="4" aria-label="4 stars">★</button>
+              <button type="button" class="star-btn" data-value="5" aria-label="5 stars">★</button>
+            </div>
+            <p class="star-hint" id="star-hint">Tap a star</p>
+          </div>
+          <div class="clean-form-group">
+            <label for="fb-message">Message</label>
+            <textarea id="fb-message" name="message" class="clean-textarea" rows="4" placeholder="What stood out — or what to improve?" required maxlength="500"></textarea>
+          </div>
+          <button type="submit" class="btn-submit-clean">Post feedback</button>
+        </form>
+
+        <div>
+          <div class="feedback-summary" id="feedback-summary"></div>
+          <div class="feedback-wall" id="feedback-wall"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECT MODAL -->
+  <div id="project-modal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="project-modal-title">
+    <div class="modal-container-clean">
+      <button class="modal-close-btn" type="button" aria-label="Close">✕</button>
+      <div id="project-modal-body"></div>
+    </div>
+  </div>
+
+  <div id="toast-container"></div>
+
+  <footer class="site-footer-clean">
+    <div class="container">
+      <div class="footer-grid-main">
+        <div class="footer-cta-col">
+          <span class="editorial-tag">Collaborate</span>
+          <h2 class="footer-cta-heading">Need stronger defenses?<br>Let’s secure the stack.</h2>
+          <p class="footer-cta-sub">Assessments, cloud hardening, AppSec, and secure architecture.</p>
+          <div class="footer-contact-actions">
+            <button class="btn-hire-me" data-goto="contact" type="button">Start a project →</button>
+            <div class="footer-email-box">
+              <a href="mailto:hello@jude.design" class="footer-email-text">hello@jude.design</a>
+              <button class="footer-copy-btn" type="button" data-copy="hello@jude.design" title="Copy email">Copy</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-social-col">
+          <div class="footer-social-header">
+            <span class="editorial-tag" style="margin-bottom: 0;">Networks</span>
+            <span class="footer-social-sub">Open in a new tab</span>
+          </div>
+          <div class="footer-social-matrix" id="footer-socials"></div>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <div class="footer-brand-meta">
+          <div class="brand-badge" style="width: 32px; height: 30px; font-size: 0.95rem;">JD</div>
+          <span class="footer-brand-text">Jude</span>
+          <span class="footer-copyright-inline">© 2026</span>
+        </div>
+        <div class="footer-status-pill">
+          <span class="status-dot"></span>
+          <span>Available worldwide · London / New York</span>
+        </div>
+        <button class="footer-back-to-top" type="button" data-goto="home">
+          <span>Back to top</span>
+          <span>↑</span>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/audio.js"></script>
+  <script src="js/labs.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
